@@ -1,0 +1,99 @@
+{
+  "_說明": "複製成 config.json 再改（config.json 不會進版控）。以底線開頭的鍵會被忽略，可當註解。相對路徑以本檔所在資料夾為準。金鑰不放這裡：外部引擎只填環境變數『名稱』。",
+
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8787,
+    "base_path": "",
+    "_base_path": "反向代理沒有去掉網址前綴時才需要，例如 /ask-api",
+    "request_timeout_s": 30,
+    "hard_timeout_s": 15,
+    "max_concurrent": 4
+  },
+
+  "limits": {
+    "max_seconds": 15,
+    "max_body_bytes": null,
+    "_max_body_bytes": "null＝依 max_seconds 自動推算（15 秒 = 480,044 B）"
+  },
+
+  "auth": {
+    "token_sha256": [],
+    "health_requires_token": true,
+    "_token_sha256": "放 token 的 SHA-256 雜湊（不是明文）；空陣列＝不檢查。產生方式見 README"
+  },
+
+  "stt": {
+    "type": "fake",
+    "_type": "fake｜openai_compat｜custom；只有被選中的那一塊會生效",
+    "fake": { "fixed_text": null },
+    "openai_compat": {
+      "base_url": "https://ai.example.com/v1",
+      "model": "your-stt-model",
+      "api_key_env": "ASK_STT_API_KEY",
+      "language": "zh",
+      "timeout_s": 10
+    },
+    "custom": { "factory": "my_engines:make_stt" }
+  },
+
+  "llm": {
+    "type": "fake",
+    "fake": {},
+    "openai_compat": {
+      "base_url": "https://ai.example.com/v1",
+      "model": "your-llm-model",
+      "api_key_env": "ASK_LLM_API_KEY",
+      "timeout_s": 10,
+      "max_tokens": 200,
+      "temperature": 0.7
+    },
+    "custom": { "factory": "my_engines:make_llm" }
+  },
+
+  "tts": {
+    "type": "fake",
+    "fake": {},
+    "openai_compat": {
+      "base_url": "https://ai.example.com/v1",
+      "model": "your-tts-model",
+      "api_key_env": "ASK_TTS_API_KEY",
+      "voice": "default",
+      "response_format": "wav",
+      "sample_rate": 24000,
+      "timeout_s": 10
+    },
+    "custom": { "factory": "my_engines:make_tts" }
+  },
+
+  "child_mode": {
+    "rules_file": null,
+    "_rules_file": "null＝依序找 child_rules.json、child_rules.example.json",
+    "empty_stt": "speak",
+    "_empty_stt": "speak＝回 200＋「我沒聽清楚」語音；error＝回 422 no_speech",
+    "max_answer_chars": 150
+  },
+
+  "quota": {
+    "per_minute": 6,
+    "per_day": 200,
+    "_per_minute": "每台裝置的次數上限；0＝不限",
+    "utc_offset_minutes": 480,
+    "_utc_offset_minutes": "每日額度與使用時段用的時區（480＝UTC+8）",
+    "allowed_hours": { "enabled": false, "start": "07:00", "end": "20:30" }
+  },
+
+  "qa_log": {
+    "enabled": true,
+    "path": "./data/qa_log.jsonl",
+    "retention_days": 30,
+    "_說明": "只記時間、裝置 ID、辨識文字（個資已遮蔽）、回答文字、是否被過濾、延遲；不存錄音"
+  },
+
+  "display": {
+    "font_path": "",
+    "_font_path": "選用：要產生 X-Display-Bitmap 時填中文字型檔路徑（需安裝 Pillow）；空字串＝不送這個標頭",
+    "font_index": 0,
+    "font_size": 16
+  }
+}

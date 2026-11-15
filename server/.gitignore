@@ -1,0 +1,6 @@
+# 本機資料與個人設定（不要進版控）
+data/
+config.json
+child_rules.json
+__pycache__/
+*.pyc

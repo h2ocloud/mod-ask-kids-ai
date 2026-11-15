@@ -1,0 +1,27 @@
+# 帳密與本機設定（不要 commit）
+secrets.h
+**/secrets.h
+server/config.json
+server/child_rules.json
+server/data/
+.env
+*.env
+
+# 編譯產物（有 secrets.h 時 binary 內含 Wi-Fi 帳密）
+build/
+.build/
+*.bin
+*.elf
+*.map
+*.hex
+
+# 列印機專屬檔案
+*.gcode
+*.3mf
+
+# 系統與暫存
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+node_modules/

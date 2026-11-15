@@ -1,0 +1,15 @@
+item,qty,description,key_specs,spec_source,notes
+ESP32-S3-DevKitC-1 N16R8,1,Espressif development board (44 pins, headers soldered),"ESP32-S3-WROOM-1-N16R8: 16 MB Quad flash, 8 MB Octal PSRAM, Wi-Fi 2.4 GHz; official v1.0/v1.1 boards have two Micro-USB ports",Espressif user guide v1.1 / WROOM-1 datasheet,USB-C versions are usually third-party compatible boards; check silkscreen
+INMP441 microphone module,1,I2S MEMS microphone breakout (headers soldered),"VDD 1.62-3.63 V; 24-bit in 32-bit slot, 64 SCK per WS; L/R pin selects channel",TDK INMP441 datasheet,Tie L/R to GND (left channel)
+MAX98357A amplifier module,1,I2S class-D mono amplifier breakout (headers soldered),"VDD 2.5-5.5 V; ~3.2 W into 4 ohm at 5 V (10% THD); LRCLK 8/16/32/44.1/48 kHz only; GAIN float = 9 dB",Maxim/ADI MAX98357A datasheet,Power from 5V pin; SD floating = (L+R)/2
+Speaker,1,4 ohm 3 W full-range speaker,"diameter 50 mm (round frame); height ~18 mm (to be measured)",typical values,Square or eared frames will not fit the round seat
+OLED display,1,0.96 inch 128x64 I2C OLED (SSD1315 controller; 4 pins),"I2C address 0x3C; pull-ups on module (to be measured)",Solomon SSD1315 datasheet,VCC/GND pin order differs between vendors
+Tactile switch,1,12x12 mm 4-pin tactile switch with round cap,"actuator height with cap ~7.3 mm (to be measured)",Omron B3F datasheet (generic 12x12 reference),Use diagonal pins
+Dupont wires,~20,female-female jumper wires 20 cm,,,16 go to the board
+Self-tapping screws M3x10,4,pan head <=5.6 mm,,,base to shell
+Self-tapping screws M3x6,4,pan head,,,OLED bar and mic bar (do not use longer)
+Rubber feet,4,10 mm adhesive,,,cover the base screws
+Foam,small,"double-sided foam tape (3 mm wide), 3 mm EVA foam sheet, foam rings (see cad assembly notes)",,,
+Electrolytic capacitor (recommended),1,470-1000 uF 10 V + 0.1 uF ceramic,,,across amplifier Vin-GND
+PLA filament,~150 g,black and white,,,per printed set (estimate)
+USB cable and 5 V adapter,1,"data-capable cable matching the board (Micro-USB for official boards); adapter >= 1 A",,,

@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1580" width="2000" height="1580" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+<title>MOD-ASK 接線圖：ESP32-S3-DevKitC-1 N16R8＋INMP441＋MAX98357A＋OLED＋按鈕</title>
+<metadata>SPDX-License-Identifier: CC0-1.0；自繪，不含第三方元件圖。腳位來源見 wiring/PINMAP.md</metadata>
+<style>svg{--bg:#ffffff;--ink:#1d1d1f;--muted:#5b5b66;--board:#1f4e79;--boardink:#ffffff}</style>
+<rect x="0" y="0" width="2000" height="1580" rx="0" fill="var(--bg)" stroke="none" stroke-width="2" />
+<text x="40" y="56" font-size="38" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">MOD-ASK 兒童 AI 問答機：接線圖</text>
+<text x="40" y="92" font-size="20" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">ESP32-S3-DevKitC-1 N16R8（44 腳）正面朝上、天線朝上；J1／J3 腳號從天線端算起（官方 v1.1 腳位表）</text>
+<rect x="840" y="300" width="320" height="970" rx="16" fill="var(--board)" stroke="#0d2c47" stroke-width="3" />
+<rect x="910" y="236" width="180" height="74" rx="6" fill="#c0c0c8" stroke="#555" stroke-width="2" />
+<text x="1000" y="280" font-size="20" text-anchor="middle" font-weight="bold" fill="#1d1d1f" class="">天線（模組端）</text>
+<rect x="870" y="318" width="260" height="92" rx="6" fill="#9aa3ad" stroke="#444" stroke-width="2" />
+<text x="1000" y="356" font-size="18" text-anchor="middle" font-weight="bold" fill="#111" class="">ESP32-S3-WROOM-1</text>
+<text x="1000" y="384" font-size="15" text-anchor="middle" font-weight="normal" fill="#111" class="">N16R8（16 MB＋8 MB PSRAM）</text>
+<rect x="880" y="1252" width="90" height="46" rx="4" fill="#b8b8be" stroke="#444" stroke-width="2" />
+<text x="925" y="1328" font-size="16" text-anchor="middle" font-weight="normal" fill="var(--muted)" class="">UART 口（燒錄／序列埠）</text>
+<rect x="1030" y="1252" width="90" height="46" rx="4" fill="#b8b8be" stroke="#444" stroke-width="2" />
+<text x="1075" y="1352" font-size="16" text-anchor="middle" font-weight="normal" fill="var(--muted)" class="">USB 口（GPIO19/20）</text>
+<text x="854" y="440" font-size="22" text-anchor="start" font-weight="bold" fill="var(--boardink)" class="">J1</text>
+<text x="1146" y="440" font-size="22" text-anchor="end" font-weight="bold" fill="var(--boardink)" class="">J3</text>
+<circle cx="862" cy="470" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="476" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">1 3V3</text>
+<circle cx="862" cy="506" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="512" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">2 3V3</text>
+<circle cx="862" cy="542" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="548" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">3 RST</text>
+<circle cx="862" cy="578" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="584" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">4 IO4</text>
+<circle cx="862" cy="614" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="620" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">5 IO5</text>
+<circle cx="862" cy="650" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="656" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">6 IO6</text>
+<circle cx="862" cy="686" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="692" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">7 IO7</text>
+<circle cx="862" cy="722" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="728" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">8 IO15</text>
+<circle cx="862" cy="758" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="764" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">9 IO16</text>
+<circle cx="862" cy="794" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="800" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">10 IO17</text>
+<circle cx="862" cy="830" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="836" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">11 IO18</text>
+<circle cx="862" cy="866" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="872" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">12 IO8</text>
+<circle cx="862" cy="902" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="908" font-size="17" text-anchor="start" font-weight="normal" fill="#9fb3c8" class="">13 IO3</text>
+<circle cx="862" cy="938" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="944" font-size="17" text-anchor="start" font-weight="normal" fill="#9fb3c8" class="">14 IO46</text>
+<circle cx="862" cy="974" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="980" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">15 IO9</text>
+<circle cx="862" cy="1010" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1016" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">16 IO10</text>
+<circle cx="862" cy="1046" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1052" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">17 IO11</text>
+<circle cx="862" cy="1082" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1088" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">18 IO12</text>
+<circle cx="862" cy="1118" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1124" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">19 IO13</text>
+<circle cx="862" cy="1154" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1160" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">20 IO14</text>
+<circle cx="862" cy="1190" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1196" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">21 5V</text>
+<circle cx="862" cy="1226" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="880" y="1232" font-size="17" text-anchor="start" font-weight="normal" fill="var(--boardink)" class="">22 GND</text>
+<circle cx="1138" cy="470" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="476" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">GND 1</text>
+<circle cx="1138" cy="506" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="512" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">TX/43 2</text>
+<circle cx="1138" cy="542" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="548" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">RX/44 3</text>
+<circle cx="1138" cy="578" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="584" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO1 4</text>
+<circle cx="1138" cy="614" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="620" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO2 5</text>
+<circle cx="1138" cy="650" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="656" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO42 6</text>
+<circle cx="1138" cy="686" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="692" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO41 7</text>
+<circle cx="1138" cy="722" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="728" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO40 8</text>
+<circle cx="1138" cy="758" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="764" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO39 9</text>
+<circle cx="1138" cy="794" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="800" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO38 10</text>
+<circle cx="1138" cy="830" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="836" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO37 11</text>
+<circle cx="1138" cy="866" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="872" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO36 12</text>
+<circle cx="1138" cy="902" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="908" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO35 13</text>
+<circle cx="1138" cy="938" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="944" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO0 14</text>
+<circle cx="1138" cy="974" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="980" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO45 15</text>
+<circle cx="1138" cy="1010" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1016" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO48 16</text>
+<circle cx="1138" cy="1046" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1052" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO47 17</text>
+<circle cx="1138" cy="1082" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1088" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">IO21 18</text>
+<circle cx="1138" cy="1118" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1124" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO20 19</text>
+<circle cx="1138" cy="1154" r="9" fill="#6b6b6b" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1160" font-size="17" text-anchor="end" font-weight="normal" fill="#9fb3c8" class="">IO19 20</text>
+<circle cx="1138" cy="1190" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1196" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">GND 21</text>
+<circle cx="1138" cy="1226" r="9" fill="#e8c547" stroke="#111" stroke-width="1.5"/>
+<text x="1120" y="1232" font-size="17" text-anchor="end" font-weight="normal" fill="var(--boardink)" class="">GND 22</text>
+<rect x="250" y="330" width="300" height="300" rx="10" fill="#eaf2fb" stroke="var(--ink)" stroke-width="2" />
+<text x="264" y="362" font-size="24" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">INMP441 麥克風</text>
+<text x="264" y="388" font-size="16" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">I2S 輸入，3.3 V</text>
+<text x="538" y="406" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">VDD</text>
+<rect x="543" y="393" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="456" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">WS</text>
+<rect x="543" y="443" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="501" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">SCK</text>
+<rect x="543" y="488" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="546" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">SD</text>
+<rect x="543" y="533" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<rect x="250" y="330" width="300" height="300" rx="10" fill="none" stroke="var(--ink)" stroke-width="2" />
+<text x="264" y="362" font-size="24" text-anchor="start" font-weight="bold" fill="var(--ink)" class=""></text>
+<text x="340" y="618" font-size="16" text-anchor="middle" font-weight="bold" fill="var(--ink)" class="">L/R</text>
+<rect x="333" y="623" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="460" y="618" font-size="16" text-anchor="middle" font-weight="bold" fill="var(--ink)" class="">GND</text>
+<rect x="453" y="623" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<rect x="250" y="820" width="300" height="330" rx="10" fill="#edf7ec" stroke="var(--ink)" stroke-width="2" />
+<text x="264" y="852" font-size="24" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">MAX98357A 功放</text>
+<text x="264" y="878" font-size="16" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">I2S 輸出，Vin 5 V</text>
+<text x="538" y="896" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">DIN</text>
+<rect x="543" y="883" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="941" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">BCLK</text>
+<rect x="543" y="928" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="986" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">LRC</text>
+<rect x="543" y="973" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="1056" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">Vin</text>
+<rect x="543" y="1043" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="538" y="1106" font-size="18" text-anchor="end" font-weight="bold" fill="var(--ink)" class="">GND</text>
+<rect x="543" y="1093" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<rect x="250" y="820" width="300" height="330" rx="10" fill="none" stroke="var(--ink)" stroke-width="2" />
+<text x="264" y="852" font-size="24" text-anchor="start" font-weight="bold" fill="var(--ink)" class=""></text>
+<text x="262" y="1026" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">GAIN 浮接＝9 dB</text>
+<rect x="243" y="1013" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="262" y="1081" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">SD 浮接＝(L+R)/2</text>
+<rect x="243" y="1068" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<rect x="1500" y="300" width="330" height="260" rx="10" fill="#f4eefb" stroke="var(--ink)" stroke-width="2" />
+<text x="1514" y="332" font-size="24" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">0.96" OLED</text>
+<text x="1514" y="358" font-size="16" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">SSD1315（I2C 0x3C）</text>
+<text x="1512" y="396" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">VCC</text>
+<rect x="1493" y="383" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="1512" y="441" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">GND</text>
+<rect x="1493" y="428" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="1512" y="486" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">SCL</text>
+<rect x="1493" y="473" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="1512" y="531" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">SDA</text>
+<rect x="1493" y="518" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<rect x="1500" y="920" width="330" height="240" rx="10" fill="#f7efe9" stroke="var(--ink)" stroke-width="2" />
+<text x="1514" y="952" font-size="24" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">12×12 按鈕</text>
+<text x="1514" y="978" font-size="16" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">按住說話（對角兩腳）</text>
+<text x="1512" y="1026" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">A</text>
+<rect x="1493" y="1013" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="1512" y="1101" font-size="18" text-anchor="start" font-weight="bold" fill="var(--ink)" class="">B</text>
+<rect x="1493" y="1088" width="14" height="14" fill="#c9a227" stroke="var(--ink)" stroke-width="1.5"/>
+<path d="M 340 630 L 340 664 L 460 664 L 460 630" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 340 630 L 340 664 L 460 664 L 460 630" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="340" cy="630" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="460" cy="630" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<text x="330" y="694" font-size="16" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">L/R 接 GND＝左聲道</text>
+<rect x="300" y="1230" width="200" height="110" rx="55" fill="#f2f2f2" stroke="var(--ink)" stroke-width="2" />
+<text x="400" y="1280" font-size="18" text-anchor="middle" font-weight="bold" fill="var(--ink)" class="">喇叭 4 Ω 3 W</text>
+<text x="400" y="1305" font-size="16" text-anchor="middle" font-weight="normal" fill="var(--muted)" class="">Ø50 mm</text>
+<path d="M 360 1150 L 360 1230" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 360 1150 L 360 1230" fill="none" stroke="#555" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="360" cy="1150" r="7" fill="#555" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="360" cy="1230" r="7" fill="#555" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 440 1150 L 440 1230" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 440 1150 L 440 1230" fill="none" stroke="#555" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="440" cy="1150" r="7" fill="#555" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="440" cy="1230" r="7" fill="#555" stroke="var(--bg)" stroke-width="2"/>
+<text x="452" y="1196" font-size="16" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">端子 +／−</text>
+<path d="M 550 400 L 790 400 L 790 470 L 838 470 L 862 470" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 400 L 790 400 L 790 470 L 838 470 L 862 470" fill="none" stroke="#d62728" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="400" r="7" fill="#d62728" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="470" r="7" fill="#d62728" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 450 L 760 450 L 760 578 L 838 578 L 862 578" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 450 L 760 450 L 760 578 L 838 578 L 862 578" fill="none" stroke="#1f77b4" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="450" r="7" fill="#1f77b4" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="578" r="7" fill="#1f77b4" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 495 L 730 495 L 730 614 L 838 614 L 862 614" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 495 L 730 495 L 730 614 L 838 614 L 862 614" fill="none" stroke="#17becf" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="495" r="7" fill="#17becf" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="614" r="7" fill="#17becf" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 540 L 700 540 L 700 650 L 838 650 L 862 650" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 540 L 700 540 L 700 650 L 838 650 L 862 650" fill="none" stroke="#2c5fa8" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="540" r="7" fill="#2c5fa8" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="650" r="7" fill="#2c5fa8" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 890 L 700 890 L 700 686 L 838 686 L 862 686" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 890 L 700 890 L 700 686 L 838 686 L 862 686" fill="none" stroke="#2ca02c" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="890" r="7" fill="#2ca02c" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="686" r="7" fill="#2ca02c" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 935 L 730 935 L 730 722 L 838 722 L 862 722" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 935 L 730 935 L 730 722 L 838 722 L 862 722" fill="none" stroke="#7fbf3f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="935" r="7" fill="#7fbf3f" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="722" r="7" fill="#7fbf3f" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 980 L 760 980 L 760 758 L 838 758 L 862 758" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 980 L 760 980 L 760 758 L 838 758 L 862 758" fill="none" stroke="#1b7a3a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="980" r="7" fill="#1b7a3a" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="758" r="7" fill="#1b7a3a" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 1050 L 820 1050 L 820 1190 L 838 1190 L 862 1190" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 1050 L 820 1050 L 820 1190 L 838 1190 L 862 1190" fill="none" stroke="#ff7f0e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="1050" r="7" fill="#ff7f0e" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="1190" r="7" fill="#ff7f0e" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 550 1100 L 790 1100 L 790 1226 L 838 1226 L 862 1226" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 550 1100 L 790 1100 L 790 1226 L 838 1226 L 862 1226" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="550" cy="1100" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="862" cy="1226" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 460 630 L 460 664 L 190 664 L 190 1420 L 1390 1420 L 1390 1226 L 1162 1226 L 1138 1226" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 460 630 L 460 664 L 190 664 L 190 1420 L 1390 1420 L 1390 1226 L 1162 1226 L 1138 1226" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="460" cy="630" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1138" cy="1226" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 862 506 L 838 506 L 812 506 L 812 180 L 1350 180 L 1350 390 L 1500 390" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 862 506 L 838 506 L 812 506 L 812 180 L 1350 180 L 1350 390 L 1500 390" fill="none" stroke="#d62728" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="862" cy="506" r="7" fill="#d62728" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1500" cy="390" r="7" fill="#d62728" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 1138 470 L 1162 470 L 1220 470 L 1220 435 L 1500 435" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 1138 470 L 1162 470 L 1220 470 L 1220 435 L 1500 435" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1138" cy="470" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1500" cy="435" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 1138 650 L 1162 650 L 1260 650 L 1260 480 L 1500 480" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 1138 650 L 1162 650 L 1260 650 L 1260 480 L 1500 480" fill="none" stroke="#e377c2" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1138" cy="650" r="7" fill="#e377c2" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1500" cy="480" r="7" fill="#e377c2" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 1138 686 L 1162 686 L 1300 686 L 1300 525 L 1500 525" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 1138 686 L 1162 686 L 1300 686 L 1300 525 L 1500 525" fill="none" stroke="#9467bd" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1138" cy="686" r="7" fill="#9467bd" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1500" cy="525" r="7" fill="#9467bd" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 1138 1046 L 1162 1046 L 1260 1046 L 1260 1020 L 1500 1020" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 1138 1046 L 1162 1046 L 1260 1046 L 1260 1020 L 1500 1020" fill="none" stroke="#8c564b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1138" cy="1046" r="7" fill="#8c564b" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1500" cy="1020" r="7" fill="#8c564b" stroke="var(--bg)" stroke-width="2"/>
+<path d="M 1138 1190 L 1162 1190 L 1300 1190 L 1300 1095 L 1500 1095" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 1138 1190 L 1162 1190 L 1300 1190 L 1300 1095 L 1500 1095" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1138" cy="1190" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<circle cx="1500" cy="1095" r="7" fill="#222222" stroke="var(--bg)" stroke-width="2"/>
+<rect x="564" y="373" width="98" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="390" font-size="16" text-anchor="start" font-weight="bold" fill="#d62728" class="">3V3 → J1-1</text>
+<rect x="564" y="423" width="80" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="440" font-size="16" text-anchor="start" font-weight="bold" fill="#1f77b4" class="">WS → IO4</text>
+<rect x="564" y="468" width="89" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="485" font-size="16" text-anchor="start" font-weight="bold" fill="#17becf" class="">SCK → IO5</text>
+<rect x="564" y="513" width="80" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="530" font-size="16" text-anchor="start" font-weight="bold" fill="#2c5fa8" class="">SD → IO6</text>
+<rect x="564" y="863" width="89" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="880" font-size="16" text-anchor="start" font-weight="bold" fill="#2ca02c" class="">DIN → IO7</text>
+<rect x="564" y="908" width="107" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="925" font-size="16" text-anchor="start" font-weight="bold" fill="#7fbf3f" class="">BCLK → IO15</text>
+<rect x="564" y="953" width="98" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="970" font-size="16" text-anchor="start" font-weight="bold" fill="#1b7a3a" class="">LRC → IO16</text>
+<rect x="564" y="1023" width="134" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="1040" font-size="16" text-anchor="start" font-weight="bold" fill="#ff7f0e" class="">Vin → 5V J1-21</text>
+<rect x="564" y="1073" width="107" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="568" y="1090" font-size="16" text-anchor="start" font-weight="bold" fill="#222222" class="">GND → J1-22</text>
+<rect x="206" y="1393" width="164" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="210" y="1410" font-size="16" text-anchor="start" font-weight="bold" fill="#222222" class="">麥克風 GND → J3-22</text>
+<rect x="956" y="155" width="179" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="960" y="172" font-size="16" text-anchor="start" font-weight="bold" fill="#d62728" class="">OLED VCC ← 3V3 J1-2</text>
+<rect x="1390" y="408" width="98" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="1394" y="425" font-size="16" text-anchor="start" font-weight="bold" fill="#222222" class="">GND ← J3-1</text>
+<rect x="1390" y="453" width="98" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="1394" y="470" font-size="16" text-anchor="start" font-weight="bold" fill="#e377c2" class="">SCL ← IO42</text>
+<rect x="1390" y="498" width="98" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="1394" y="515" font-size="16" text-anchor="start" font-weight="bold" fill="#9467bd" class="">SDA ← IO41</text>
+<rect x="1385" y="993" width="103" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="1389" y="1010" font-size="16" text-anchor="start" font-weight="bold" fill="#8c564b" class="">按鈕 ← IO47</text>
+<rect x="1340" y="1068" width="148" height="22" rx="4" fill="var(--bg)" opacity="0.95"/>
+<text x="1344" y="1085" font-size="16" text-anchor="start" font-weight="bold" fill="#222222" class="">按鈕 ← GND J3-21</text>
+<rect x="1420" y="1200" width="560" height="226" rx="10" fill="var(--bg)" stroke="var(--muted)" stroke-width="1.5" />
+<text x="1440" y="1236" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">• 麥克風、OLED 只接 3V3；功放 Vin 接 5V（I2S 訊號仍是 3.3 V）</text>
+<text x="1440" y="1264" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">• 功放 Vin–GND 建議就近並一顆 470–1000 µF 電解＋0.1 µF</text>
+<text x="1440" y="1292" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">• 無聲時：SD 改接 3V3（固定左聲道，韌體左右送同一份）</text>
+<text x="1440" y="1320" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">• I2C 上拉：OLED 模組板上已有（到貨後用電表確認）</text>
+<text x="1440" y="1348" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">• 按鈕接「對角」兩腳；不確定就用電表量按下才導通的那對</text>
+<text x="1440" y="1376" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">• 避開（灰色）：IO0/3/45/46 strapping、IO19/20 USB、</text>
+<text x="1440" y="1404" font-size="17" text-anchor="start" font-weight="normal" fill="var(--ink)" class="">  IO35/36/37 PSRAM、IO38/48 RGB LED、TX/RX UART0</text>
+<text x="40" y="1556" font-size="15" text-anchor="start" font-weight="normal" fill="var(--muted)" class="">自繪示意圖（CC0-1.0）；腳距與元件大小不按比例。腳位來源：Espressif ESP32-S3-DevKitC-1 v1.1 user guide、INMP441／MAX98357A datasheet。</text>
+</svg>

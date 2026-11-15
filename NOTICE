@@ -1,0 +1,22 @@
+MOD-ASK — 第三方元件與致謝 / Third-party components and acknowledgements
+
+本 repo 不包含下列元件的原始碼或編譯產物；建置時由使用者自行安裝。
+This repository does not include the following components; users install them when building.
+
+- Arduino-ESP32 core 3.3.12 (Espressif Systems) — LGPL-2.1 (core) and component licenses.
+  https://github.com/espressif/arduino-esp32
+  若散布編譯好的韌體，請依 LGPL-2.1 提供相同版本 core 的取得方式。本 repo 不附編譯韌體。
+- U8g2 2.36.19 (olikraus) — BSD-2-Clause; font u8g2_font_6x10_tf is from X11 misc-fixed (public domain).
+  https://github.com/olikraus/u8g2
+- three.js r160 — MIT（只用在專案介紹頁的 3D 檢視器，不在本 repo）。
+
+本 repo 內含的衍生資料：
+- firmware/mod_ask/labels_zh.h：OLED 中文狀態字點陣，由 Cubic 11（俐方體11號，ACh-K）以
+  firmware/tools/gen_labels.py 算繪。SIL Open Font License 1.1，全文 LICENSES/OFL-1.1-Cubic-11.txt。
+  https://github.com/ACh-K/Cubic-11
+
+參考與相容（沒有複製其程式碼）：
+- xiaozhi-esp32（MIT）https://github.com/78/xiaozhi-esp32 — 本專案接線與其 bread-compact-wifi 板型相容。
+- xiaozhi-esp32-server（MIT）https://github.com/xinnan-tech/xiaozhi-esp32-server
+
+規格資料來源（Espressif、TDK、Analog Devices/Maxim、Solomon Systech、Omron 的官方文件）列在 wiring/PINMAP.md。

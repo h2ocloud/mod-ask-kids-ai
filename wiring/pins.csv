@@ -1,0 +1,21 @@
+module,module_pin,esp32_signal,gpio,header_pin,wire_color,note
+INMP441,VDD,3V3,,J1-1,red,3.3 V only
+INMP441,GND,GND,,J3-22,black,
+INMP441,L/R,GND,,(tie to GND on module),black,GND = left channel
+INMP441,WS,I2S0 WS,4,J1-4,blue,
+INMP441,SCK,I2S0 BCLK,5,J1-5,cyan,
+INMP441,SD,I2S0 DIN,6,J1-6,dark blue,mic to ESP32
+MAX98357A,Vin,5V,,J1-21,orange,5 V for ~3 W; I2S logic stays 3.3 V
+MAX98357A,GND,GND,,J1-22,black,
+MAX98357A,DIN,I2S1 DOUT,7,J1-7,green,ESP32 to amp
+MAX98357A,BCLK,I2S1 BCLK,15,J1-8,light green,
+MAX98357A,LRC,I2S1 WS,16,J1-9,dark green,
+MAX98357A,GAIN,(not connected),,,,float = 9 dB
+MAX98357A,SD,(not connected),,,,float = (L+R)/2; tie to 3V3 if silent
+MAX98357A,SPK+/SPK-,speaker,,,,4 ohm 3 W 50 mm
+OLED SSD1315,VCC,3V3,,J1-2,red,check VCC/GND order on silkscreen
+OLED SSD1315,GND,GND,,J3-1,black,
+OLED SSD1315,SCL,I2C SCL,42,J3-6,pink,
+OLED SSD1315,SDA,I2C SDA,41,J3-7,purple,
+Button 12x12,pin A,GPIO (pull-up),47,J3-17,brown,pressed = LOW
+Button 12x12,pin B (diagonal),GND,,J3-21,black,
