@@ -15,6 +15,7 @@
 | `img/` | 算繪圖（閉合、背面、爆炸、剖面、正面、俯視、盤面、試配片） |
 | `mod_ask_assembled.glb` | 給網頁 3D 檢視器用的組裝模型（mm、Y 朝上） |
 | `PRINT_ORDER.md` | 列印順序（通用說明） |
+| （Release v0.1.0） | STEP（R2，壓縮檔）、兩盤 G‑code（作者那台 Ender‑3 的版本，含姊妹專案 Wi‑Fi 偵測節點的件）：太大不放進 git |
 
 ## 零件（12 件）
 

@@ -18,9 +18,9 @@
 |---|---|
 | `firmware/` | Arduino-ESP32 韌體（按住說話、I2S 錄放、OLED、HTTPS）＋主機端單元測試 |
 | `server/` | 最小參考伺服器（Python 標準函式庫；STT／LLM／TTS 可替換，預設假引擎） |
-| `docs/` | 協議 `SERVER_API.md`、架構、建置與燒錄、韌體選擇、xiaozhi 選配 |
+| `docs/` | 協議 `SERVER_API.md`、架構、建置與燒錄、韌體選擇、xiaozhi 選配、[製作紀錄 `JOURNAL.md`](docs/JOURNAL.md)、[維護流程 `MAINTAINING.md`](docs/MAINTAINING.md) |
 | `wiring/` | 腳位表（md＋csv）、接線圖（SVG＋PNG） |
-| `cad/` | 外殼 OpenSCAD 原始檔、STL、算繪圖、GLB、列印順序 |
+| `cad/` | 外殼 OpenSCAD 原始檔、STL、算繪圖、GLB、列印順序（STEP 與 G‑code 太大，附在 [Release v0.1.0](https://github.com/h2ocloud/mod-ask-kids-ai/releases/tag/v0.1.0)） |
 | `bom/` | 材料表（md＋csv，不含價格與通路） |
 
 ## 材料（BOM 摘要）
@@ -44,12 +44,16 @@ ESP32-S3-DevKitC-1 **N16R8**、INMP441 麥克風、MAX98357A 功放＋4 Ω 3 W �
 
 ## 3D 列印
 
-- Creality Ender-3（0.4 mm 噴嘴）、PLA（黑、白）、Cura「Low 0.28」品質、**免支撐**。
-- 盤面：黑盤（底座、大圓鈕、內部小件）、白盤（上殼、前面板）、選印試配片。
-- 列印順序：[`cad/PRINT_ORDER.md`](cad/PRINT_ORDER.md)（先印試配片確認尺寸，最大的上殼放最後）。
-- 3D 文件：<!-- ONSHAPE -->[Onshape 公開文件](https://cad.onshape.com/documents/26e2bdcd8b8449438ee7556c/w/0d064837454aeb55c035dda0/e/0ed907cfb3682001e2f4daf6)<!-- /ONSHAPE -->
-- 零件尺寸多為典型值，外殼每個卡位都留了 ±1 mm 調整空間（泡棉、墊片、長孔）；到貨後怎麼調見 `cad/` 內的說明。
-- 不提供 G-code：它綁定特定印表機的設定，請用自己的切片軟體切。
+![外殼 R2 爆炸圖（設計稿，尚未印出）](cad/img/03_exploded.png)
+
+- Creality Ender-3（0.4 mm 噴嘴）、PLA（只有黑、白）、Cura 5.6「Low 0.28」、2 道牆、**免支撐**；第 1–3 層關風扇、第 4 層起全速。
+- **和姊妹專案 [Wi‑Fi 偵測節點](https://github.com/h2ocloud/esp32c3-wifi-sensing-node) 一起排成兩盤**：先印 **白盤**（問答機上殼、前面板＋Wi‑Fi 節點滑蓋，約 10 h、90 g），再印 **黑盤**（問答機底座、大圓鈕、開關座、卡圈、墊片、壓條、喇叭後腔與壓環＋Wi‑Fi 節點殼身與小件，約 11.4 h、100 g）。兩盤合計約 21.5 h、190 g（切片軟體估計，**尚未實際印出**）。
+- 為什麼先白後黑：上殼最大、最高、最容易翹，也是唯一不能靠泡棉或墊片補救的件，先印先發現問題；黑盤的件要和上殼一起才試得了配合。
+- 只印問答機：用 `cad/stl/plate/ASK_WHITE.stl`、`ASK_BLACK.stl` 自己切片。
+- 完整列印順序與每盤印完的合格檢查（白盤 9 項、黑盤 8 項）：[`cad/PRINT_ORDER.md`](cad/PRINT_ORDER.md)。
+- 3D 文件：<!-- ONSHAPE -->[Onshape 公開文件（R2 零件工作室）](https://cad.onshape.com/documents/26e2bdcd8b8449438ee7556c/w/0d064837454aeb55c035dda0/e/d83a137c4711ee4c535cc761)（同一份文件裡還有 [R1 工作室](https://cad.onshape.com/documents/26e2bdcd8b8449438ee7556c/w/0d064837454aeb55c035dda0/e/0ed907cfb3682001e2f4daf6)）<!-- /ONSHAPE -->
+- 零件尺寸多為典型值，外殼每個卡位都留了 ±1 mm 調整空間（泡棉、墊片、長孔）；到貨後怎麼調見 [`cad/README.md`](cad/README.md)。
+- [Release v0.1.0](https://github.com/h2ocloud/mod-ask-kids-ai/releases/tag/v0.1.0) 附：STL 壓縮檔、**STEP**（R2，壓縮檔）、兩盤 **G‑code**（`1_WHITE_ask_wifi.gcode`、`2_BLACK_ask_wifi.gcode`）。G‑code 是作者那台 Ender‑3 的版本（含兩個模組的件、該機專屬的起始碼與擺位），**別台印表機請用 STL 自己切片**。
 
 ## 韌體
 
@@ -85,6 +89,10 @@ sh firmware/test/run_tests.sh                         # 主機端單元測試（
 - 裝置不收集個資（裝置 ID 是亂數、不傳 MAC／SSID／位置）；伺服器預設不存錄音、提問紀錄可設保留天數或關閉。
 - 只用 USB 5 V；PLA 約 55–60 °C 會軟化，不要放窗邊、暖爐旁或車內。
 
+## 製作紀錄
+
+這個專案像接力賽一樣由很多角色（產品、採購、接線、機構、切片、韌體、軟體、AI）一棒一棒做出來，每一步做了什麼、哪裡失敗、怎麼修都記在 [`docs/JOURNAL.md`](docs/JOURNAL.md)。零件到貨、外殼印出後會繼續補記。
+
 ## 授權
 
 | 部分 | 授權 |
@@ -112,5 +120,6 @@ sh firmware/test/run_tests.sh                         # 主機端單元測試（
 - **Status: not yet tested on real hardware.** Firmware compiles (Arduino-ESP32 3.3.12, 0 warnings); pure-logic modules pass 19 host-side unit tests (573 checks, ASan/UBSan, mutation-tested); the reference server passes 264 unit tests. Parts arrive later.
 - The server URL is configurable and **empty by default** (no third-party cloud). Protocol: `docs/SERVER_API.md`. Reference server (Python stdlib, fake engines by default): `server/`.
 - Wiring: `wiring/PINMAP.md` (cross-checked against Espressif's official DevKitC-1 docs and datasheets). Pin-compatible with xiaozhi-esp32's `bread-compact-wifi` board.
-- Enclosure: OpenSCAD sources, STL, renders and GLB in `cad/`; PLA, no supports. 3D document on Onshape (link above).
+- Enclosure: OpenSCAD sources, STL, renders and GLB in `cad/`; PLA, no supports. It is printed on two plates (white, then black) together with the sister project [esp32c3-wifi-sensing-node](https://github.com/h2ocloud/esp32c3-wifi-sensing-node). STEP and the two G-code files (for the author's own Ender-3 only) are attached to Release v0.1.0. 3D document on Onshape (link above).
+- Build log (in Chinese): `docs/JOURNAL.md`.
 - Licenses: firmware/server/tools MIT; hardware (cad, wiring docs, BOM) CERN-OHL-P-2.0; wiring drawing CC0-1.0; OLED glyph bitmaps OFL-1.1.
